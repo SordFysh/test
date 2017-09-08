@@ -1,0 +1,163 @@
+<div class="container-fluid" style="padding-top:1rem;">
+
+  <div class="row trimBottom">
+    <div class="col-lg-6" style="overflow: hidden">
+      <div class="showMobile extraSpace center"><h1>Assembly</h1><br></div>
+      <iframe width="560" height="315" class="setMax" src="https://www.youtube.com/embed/pM4TYEqv4es" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="hideMobile">Assembling Your Skycase</h1>
+      <p>Follow our easy step-by-step guide on how to build your new Skycase!<p>
+      <a href="assets/RaspberryPiAssembly2.pdf" target="_blank" class="btn btn-primary setMax" style="overflow:hidden" role="button" aria-pressed="true"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download Assembly Instructions (PDF)</a>
+    </div>
+  </div>
+
+  <br>
+  <hr>
+
+  <div class="progress hideMobile">
+    <div id="progress1" class="progress-bar bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"><button (click)="setStep(1)" type="button" class="btn btn-link firstButton">{{stepTitle[0]}}</button></div>
+    <div id="progress2" class="progress-bar bg-info bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"><button (click)="setStep(2)" type="button" class="btn btn-link">{{stepTitle[1]}}</button></div>
+    <div id="progress3" class="progress-bar bg-info bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><button (click)="setStep(3)" type="button" class="btn btn-link">{{stepTitle[2]}}</button></div>
+    <div id="progress4" class="progress-bar bg-info bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><button (click)="setStep(4)" type="button" class="btn btn-link">{{stepTitle[3]}}</button></div>
+    <div id="progress5" class="progress-bar bg-info bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><button (click)="setStep(5)" type="button" class="btn btn-link">{{stepTitle[4]}}</button></div>
+  </div>
+  <br>
+
+  <div id="step1">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- <div class="showMobile extraSpace center"><h1>Instructions</h1><br></div> -->
+        <div class="pull-left showMobile">
+            <h3>{{stepTitle[0]}}</h3>
+        </div>
+        <div class="pull-right showMobile">
+            <button type="button" class="btn btn-primary" (click)="setStep(2)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+        <img src="assets/images/skycase_parts.png" width="100%">
+      </div>
+      <div class="col-lg-4">
+        <p>Parts List:</p>
+          <ul>
+            <li>4-40 nuts (x4)</li>
+            <li>4-40 screws (x4)</li>
+            <li>Small accent spacer (x1)</li>
+            <li>Large accent spacer (x1)</li>
+            <li>Base (x1)</li>
+            <li>M3x20mm standoffs (x4)</li>
+            <li>M3x10mm screws (x8)</li>
+            <li>L spacer (x2)</li>
+            <li>Long spacer bar (x1)</li>
+            <li>Short spacer bar (x4)</li>
+            <li>Top accent (x1)</li>
+            <li>Top (x1)</li>
+          </ul>
+
+          <p>Tools Required:</p>
+          <ul>
+            <li>Phillips #2 screw driver</li>
+          </ul>
+          <div class="pull-right hideMobile">
+            <button type="button" class="btn btn-primary" (click)="setStep(2)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="step2">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="pull-left showMobile">
+            <h1>{{stepTitle[1]}}</h1>
+        </div>
+        <div class="pull-right showMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(1)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" class="btn btn-primary" (click)="setStep(3)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <img src="assets/images/skycase_assembly_part1.jpeg" width="100%">
+      </div>
+      <div class="col-lg-4">
+        <p>Remove protective paper from all parts.</p>
+        <p><i>Note: if paper is difficult to remove, try pressing your fingernail into the edge of the paper rather than pulling. It will shift the paper over, making it easier to then peel off</i></p>
+        
+        <div class="pull-right hideMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(1)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" class="btn btn-primary" (click)="setStep(3)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="step3">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="pull-left showMobile">
+            <h1>{{stepTitle[2]}}</h1>
+        </div>
+        <div class="pull-right showMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(2)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" class="btn btn-primary" (click)="setStep(4)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <img src="assets/images/skycase_assembly_part2.png" width="100%">
+      </div>
+      <div class="col-lg-4">
+        <p>Build base with Raspberry Pi. Make sure the Pi is aligned as shown with the USB ports on the opposite end of the side of the base with the indent.</p>
+      
+        <p>Use the four 4-40 screws and the four 4-40 nuts. These screws and nuts are non-conductive.</p>
+        
+        <div class="pull-right hideMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(2)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" class="btn btn-primary" (click)="setStep(4)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="step4">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="pull-left showMobile">
+            <h1>{{stepTitle[3]}}</h1>
+        </div>
+        <div class="pull-right showMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(3)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" class="btn btn-primary" (click)="setStep(5)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <img src="assets/images/skycase_assembly_part3.png" width="100%">
+      </div>
+      <div class="col-lg-4">
+        <p>Insert M3 screws from bottom into M3x20 standoffs. Then start adding spacers as shown.</p>
+        
+        <div class="pull-right hideMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(3)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" class="btn btn-primary" (click)="setStep(5)">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="step5">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="pull-left showMobile">
+            <h1>{{stepTitle[4]}}</h1>
+        </div>
+        <div class="pull-right showMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(4)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+        </div>
+        <img src="assets/images/skycase_assembly_part4.png" width="100%">
+      </div>
+      <div class="col-lg-4">
+        <p>Add the rest of the spacers, accent piece, and top.</p>
+
+        <p>Plug in any inputs that have ports located on top of the Pi. We suggest threading cords and ribbons, such as the camera ribbon, through the skycase logo on the top piece before securing it.</p>
+
+        <p>Secure top with 4 M3 screws.</p>
+        
+        <div class="pull-right hideMobile">
+          <button type="button" class="btn btn-primary" (click)="setStep(4)"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

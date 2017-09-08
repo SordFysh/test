@@ -1,0 +1,81 @@
+pipeline {
+    agent any
+
+    // to use a named agent -- do this only if you require a docker container, or your jenkins server memory is too low to do the desired build
+    
+    /*agent {
+        label 'jenkins-agent-fleet'
+    }*/
+     
+    // list tools to be installed for the build in this environment
+    tools {
+        maven 'maven-3.3.9'
+        nodejs 'node-8.0.0'
+    }
+
+    stages {
+
+        stage('ui install') {
+            steps {
+                dir('ui/skycase') {
+                    sh 'yarn install'
+                }
+            }
+        }
+
+        stage('ui lint') {
+            steps {
+                dir('ui/skycase') {
+                    sh 'npm run lint'
+                }
+            }
+        }
+
+        stage('ui test') {
+            steps {
+                dir('ui/skycase') {
+                    sh 'npm test'
+                }
+            }
+        }
+
+        stage('ui e2e') {
+            steps {
+                dir('ui/skycase') {
+                    echo "e2e tests require Docker container"
+                    //sh 'npm run e2e'
+                }
+            }
+        }
+
+        stage('ui build') {
+            steps {
+                dir('ui/skycase') {
+                    sh 'npm run build -- --prod'
+                }
+            }
+        }
+
+        stage('mvn clean test') {
+            steps {
+                dir('rest') {
+                    sh 'mvn clean test'
+                }
+            }
+        }
+    }
+
+       post {
+        success {
+            echo 'Build successful'
+            updateGitlabCommitStatus name: 'jenkins', state: 'success'
+        }
+
+        failure { 
+            updateGitlabCommitStatus name: 'jenkins', state: 'failed'
+        }
+        always {
+            deleteDir()
+        }
+    }
+}

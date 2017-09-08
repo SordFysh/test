@@ -1,0 +1,39 @@
+.btn-link {
+    color: white;
+}
+.bar {
+    width: 20%;
+    height: 40px;
+    white-space: normal;
+}
+
+.firstButton {
+    white-space: normal;
+}
+
+.showMobile {
+    display: none;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 500px), screen and (max-height: 500px) {
+    .hideMobile{
+        display: none;
+    }
+    .setMax {
+    max-width: 100%;
+    height: auto;
+    }
+
+    .showMobile{
+        display: unset;
+    }
+
+    .trimBottom{
+        margin-bottom: -30px;
+    }
+
+    .xtraSpace {
+        margin-bottom: 20px;
+    }
+}

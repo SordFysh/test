@@ -1,0 +1,105 @@
+.logoContainer a .logo{
+    width:auto;
+    height: 150px;
+    margin: 0 auto !important;
+}
+
+a{
+    margin: 0 auto;
+}
+
+.col-9 {
+    max-width: 100%; 
+    margin: 5% 0;
+}
+
+.white{
+    color: white;
+    margin: 0 auto;
+}
+
+footer{
+    height: 15% !important;
+    padding: 50px 0;
+}
+
+.col{
+    height: 100% !important;
+}
+.fa{
+    font-size: 40pt;
+    margin-right: 10px;
+}
+footer .row{
+    height: 100% !important;
+}
+
+.footerInfo{
+    margin: 10% 0;
+    }
+    
+    .mobile{
+        display: none;
+    }
+
+    .web{
+        display: inline-flex;
+    }
+
+
+@media only screen and (max-width: 1023px) {
+    .logoContainer a .logo{
+    width:auto;
+    height:100px;
+    margin:0;
+    }
+
+    .fa{
+        font-size: 30pt;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logoContainer a .logo{
+    width:100%;
+    height:auto;
+    margin:0;
+    }
+
+    .hideOver{
+        overflow: hidden;
+    }
+
+    .fa{
+        font-size: 20pt;
+        margin-right: 10px;
+    }
+
+    .mobile{
+        display: inline;
+    }
+
+    .web{
+        display: none;
+    }
+
+    .logoContainer img{
+        margin: 0 auto !important;
+    }
+
+    .col-3 p{
+        text-align: center;
+        font-size: 8pt;
+        vertical-align: middle;
+    }
+
+    .col-3 .fa{
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    footer{
+        padding: 25px 0;
+    }
+}

@@ -1,0 +1,69 @@
+.wrapper {
+    /*background-image: url("../../../assets/images/skycase_splash.png");*/
+    background-size: 100%;
+    margin-top: -150px;
+    margin-left: 10%;
+    width: 80%;
+    height: 110vh;
+    background-repeat: no-repeat;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#add-skycase {
+    position: absolute;
+    top: 30%;
+    left:10%;
+    width:20%;
+    -webkit-animation: fadein 2s;
+}
+
+
+#splash-header {
+    margin-bottom: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.showcase {
+    margin-top: 100px;
+    width: 100%;
+    margin-left: 10%;
+}
+
+/*mobile*/
+@media only screen and (max-width: 500px), screen and (max-height: 500px) {
+    .wrapper {
+        margin-top: 0px;
+        position: relative;
+        height:auto;
+        min-height: 90vh;
+        overflow: hidden;
+    }
+
+    .showcase {
+    position: relative;
+    margin-top: -10%;
+    margin-left: -24%;
+    bottom: 0px;
+    width: 150%;
+    }
+
+    #add-skycase {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    -webkit-animation: fadein 2s;
+    z-index: 1;
+    }
+}
+
+h1, p{
+    margin-bottom: 1rem;
+}
